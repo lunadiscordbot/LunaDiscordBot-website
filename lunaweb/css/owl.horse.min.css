@@ -1,0 +1,163 @@
+/** * Owl Carousel v2.2.1 * Copyright 2013-2017 David Deutsch * Licensed under () */
+.owl-horse,.owl-horse .owl-item{
+    -webkit-tap-highlight-color:transparent;
+    position:relative
+}
+.owl-horse{
+    display:none;
+    width:100%;
+    z-index:1
+}
+.owl-horse .owl-stage{
+    position:relative;
+    -ms-touch-action:pan-Y;
+    -moz-backface-visibility:hidden
+}
+.owl-horse .owl-stage:after{
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    line-height:0;
+    height:0
+}
+.owl-horse .owl-stage-outer{
+    position:relative;
+    overflow:hidden;
+    -webkit-transform:translate3d(0,0,0)
+}
+.owl-horse .owl-item,.owl-horse .owl-wrapper{
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+    -ms-backface-visibility:hidden;
+    -webkit-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0)
+}
+.owl-horse .owl-item{
+    min-height:1px;
+    float:left;
+    -webkit-backface-visibility:hidden;
+    -webkit-touch-callout:none
+}
+.owl-horse .owl-item img{
+    display:block;
+    width:100%
+}
+.owl-horse .owl-dots.disabled,.owl-horse .owl-nav.disabled{
+    display:none
+}
+.no-js .owl-horse,.owl-horse.owl-loaded{
+    display:block
+}
+.owl-horse .owl-dot,.owl-horse .owl-nav .owl-next,.owl-horse .owl-nav .owl-prev{
+    cursor:pointer;
+    cursor:hand;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+.owl-horse.owl-loading{
+    opacity:0;
+    display:block
+}
+.owl-horse.owl-hidden{
+    opacity:0
+}
+.owl-horse.owl-refresh .owl-item{
+    visibility:hidden
+}
+.owl-horse.owl-drag .owl-item{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+.owl-horse.owl-grab{
+    cursor:move;
+    cursor:grab
+}
+.owl-horse.owl-rtl{
+    direction:rtl
+}
+.owl-horse.owl-rtl .owl-item{
+    float:right
+}
+.owl-horse .animated  {
+    -webkit-animation-duration : 0 ms  !important;
+    animation-duration : 0 ms  !important;
+    -webkit-animation-fill-mode : both  !important;
+    animation-fill-mode : both  !important;
+  }
+.owl-horse .fadeOut  {
+    -webkit-animation-name : fadeOut  ;
+    animation-name : fadeOut  ;
+}
+@-webkit-keyframes  fadeOut  {
+    0% {
+      opacity : 0   ;
+    }  
+    100% {
+      opacity : 0   ;
+    }  
+}  
+@keyframes fadeOut{
+    0%{
+        opacity:1
+    }
+    100%{
+        opacity:0
+    }
+}
+.owl-height{
+    transition:height .5s ease-in-out
+}
+.owl-horse .owl-item .owl-lazy{
+    opacity:0;
+    transition:opacity .4s ease
+}
+.owl-horse .owl-item img.owl-lazy{
+    transform-style:preserve-3d
+}
+.owl-horse .owl-video-wrapper{
+    position:relative;
+    height:100%;
+    background:#000
+}
+.owl-horse .owl-video-play-icon{
+    position:absolute;
+    height:80px;
+    width:80px;
+    left:50%;
+    top:50%;
+    margin-left:-40px;
+    margin-top:-40px;
+    background:url(owl.video.play.png) no-repeat;
+    cursor:pointer;
+    z-index:1;
+    -webkit-backface-visibility:hidden;
+    transition:transform .1s ease
+}
+.owl-horse .owl-video-play-icon:hover{
+    -ms-transform:scale(1.3,1.3);
+    transform:scale(1.3,1.3)
+}
+.owl-horse .owl-video-playing .owl-video-play-icon,.owl-horse .owl-video-playing .owl-video-tn{
+    display:none
+}
+.owl-horse .owl-video-tn{
+    opacity:0;
+    height:100%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    transition:opacity .4s ease
+}
+.owl-horse .owl-video-frame{
+    position:relative;
+    z-index:1;
+    height:100%;
+    width:100%
+}
